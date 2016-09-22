@@ -1,0 +1,13 @@
+{
+    "name": "shengyou/my-legacy-project",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Shengyou Fan",
+            "email": "shengyoufan@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
