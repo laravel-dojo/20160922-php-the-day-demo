@@ -2,6 +2,7 @@
 
 include __DIR__.'/inc/database.php';
 include __DIR__.'/libs/my_string_mutator.php';
+include __DIR__.'/helpers/my_functions.php';
 
 // connect to dabase
 try {
@@ -123,7 +124,7 @@ $string_mutator = new my_string_mutator();
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Laravel 道場示範教材 2016</p>
+                    <p><?=copyright()?></p>
                 </div>
             </div>
             <!-- /.row -->
