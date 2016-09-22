@@ -110,7 +110,7 @@ $string_mutator = new my_string_mutator();
                 <p><?=$string_mutator->trim($row->content)?></p>
                 <p class="text-right">
                     <span class="glyphicon glyphicon-time"></span>
-                    發表於 <?=$row->created_at?>
+                    發表於 <?=$string_mutator->trim_created_at($row->created_at)?>
                 </p>
             </div>
             <?php endwhile; ?>
