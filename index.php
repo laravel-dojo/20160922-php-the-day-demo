@@ -1,6 +1,7 @@
 <?php
 
 include __DIR__.'/inc/database.php';
+include __DIR__.'/libs/my_string_mutator.php';
 
 // connect to dabase
 try {
@@ -10,6 +11,8 @@ try {
     echo  "Error: ".$e->getMessage()."＜br/＞";
     die();
 }
+
+$string_mutator = new my_string_mutator();
 
 ?>
 <!DOCTYPE html>
@@ -104,7 +107,7 @@ try {
                 <h3>
                     <a href="#"><?=$row->title?></a>
                 </h3>
-                <p><?=$row->content?></p>
+                <p><?=$string_mutator->trim($row->content)?></p>
                 <p class="text-right">
                     <span class="glyphicon glyphicon-time"></span>
                     發表於 <?=$row->created_at?>
