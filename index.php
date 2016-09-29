@@ -1,8 +1,6 @@
 <?php
 
-include __DIR__.'/inc/database.php';
-include __DIR__.'/libs/my_string_mutator.php';
-include __DIR__.'/helpers/my_functions.php';
+include __DIR__.'/bootstrap.php';
 
 // connect to dabase
 try {
