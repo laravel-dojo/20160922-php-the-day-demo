@@ -25,8 +25,8 @@ class PostSeeder extends AbstractSeed
             $data[] = [
                 'title'      => $faker->realText(10),
                 'content'    => $faker->realText(500),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
+                'created_at' => Carbon::now()->addDays($index),
+                'updated_at' => Carbon::now()->addDays($index),
             ];
         }
 
