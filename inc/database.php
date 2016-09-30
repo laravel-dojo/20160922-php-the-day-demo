@@ -1,8 +1,8 @@
 <?php
 
-define('DB_HOST', '127.0.0.1');
-define('DB_PORT', 8889);
-define('DB_DATABASE', 'my_legacy_project');
-define('DB_CHARSET', 'utf8');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_PORT', getenv('DB_PORT'));
+define('DB_DATABASE', getenv('DB_DATABASE'));
+define('DB_CHARSET', getenv('DB_CHARSET'));
+define('DB_USERNAME', getenv('DB_USERNAME'));
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
