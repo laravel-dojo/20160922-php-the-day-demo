@@ -5,7 +5,9 @@ class my_string_mutator {
 
     function trim_created_at($date)
     {
-        $date_mutator = new my_date_mutator();
-        return $date_mutator->convert($date);
+        throw new Exception('大家來抓寶可夢');
+        
+//        $date_mutator = new my_date_mutator();
+//        return $date_mutator->convert($date);
     }
 }
