@@ -15,9 +15,9 @@ Tracy::instance();
 
 Carbon::setLocale('zh-TW');
 
-define('DB_HOST', getenv('DB_HOST'));
-define('DB_PORT', getenv('DB_PORT'));
-define('DB_DATABASE', getenv('DB_DATABASE'));
-define('DB_CHARSET', getenv('DB_CHARSET'));
-define('DB_USERNAME', getenv('DB_USERNAME'));
-define('DB_PASSWORD', getenv('DB_PASSWORD'));
+define('DB_HOST', env('DB_HOST', 'localhost'));
+define('DB_PORT', env('DB_PORT', 3306));
+define('DB_DATABASE', env('DB_DATABASE', 'homestead'));
+define('DB_CHARSET', env('DB_CHARSET', 'utf-8'));
+define('DB_USERNAME', env('DB_USERNAME', 'homestead'));
+define('DB_PASSWORD', env('DB_PASSWORD', 'secret'));
