@@ -8,6 +8,7 @@ include __DIR__.'/libs/my_string_mutator.php';
 include __DIR__.'/libs/date_mutator.php';
 include __DIR__.'/helpers/my_functions.php';
 
+use Carbon\Carbon;
 use Dotenv\Dotenv;
 use Recca0120\LaravelTracy\Tracy;
 
@@ -17,3 +18,5 @@ $dotenv->load();
 include __DIR__.'/inc/database.php';
 
 Tracy::instance();
+
+Carbon::setLocale('zh-TW');
