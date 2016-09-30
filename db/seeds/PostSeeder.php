@@ -27,7 +27,8 @@ class PostSeeder extends AbstractSeed
                 'title'      => $faker->realText(10),
                 'content'    => $faker->realText(500),
                 'created_at' => Carbon::now()->subDays($total - $index),
-                'updated_at' => Carbon::now()->subDays($total - $index),
+                'updated_at' => Carbon::now()->subDays($total - $index)
+                                    ->addHours(rand(1, 24)),
             ];
         }
 
