@@ -10,6 +10,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "recca0120/laravel-tracy": "^1.7"
+        "recca0120/laravel-tracy": "^1.7",
+        "vlucas/phpdotenv": "^2.4"
     }
 }
