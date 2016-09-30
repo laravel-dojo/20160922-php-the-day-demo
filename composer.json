@@ -22,6 +22,9 @@
         },
         "classmap": [
             "libs"
+        ],
+        "files": [
+            "helpers/my_functions.php"
         ]
     }
 }
