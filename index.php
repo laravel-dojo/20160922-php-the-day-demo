@@ -1,5 +1,7 @@
 <?php
 
+use App\MyStringMutator;
+
 include __DIR__.'/bootstrap.php';
 
 // connect to dabase
@@ -11,7 +13,7 @@ try {
     die();
 }
 
-$string_mutator = new my_string_mutator();
+$stringMutator = new MyStringMutator();
 
 ?>
 <!DOCTYPE html>
@@ -108,7 +110,7 @@ $string_mutator = new my_string_mutator();
                 <h3>
                     <a href="#"><?=$row->title?></a>
                 </h3>
-                <p><?=$string_mutator->trim($row->content)?></p>
+                <p><?=$stringMutator->trim($row->content)?></p>
                 <p class="text-right">
                     <span class="glyphicon glyphicon-time"></span>
                     發表於 <?=Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $row->created_at)->diffForHumans()?>
