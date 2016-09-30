@@ -13,6 +13,7 @@
         "recca0120/laravel-tracy": "^1.7",
         "vlucas/phpdotenv": "^2.4",
         "robmorgan/phinx": "^0.6.4",
-        "fzaninotto/faker": "^1.6"
+        "fzaninotto/faker": "^1.6",
+        "nesbot/carbon": "^1.21"
     }
 }
