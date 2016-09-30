@@ -97,7 +97,9 @@ $string_mutator = new my_string_mutator();
 
         <!-- Article Row -->
         <div class="row">
-            <?php $statement = $pdo->query("SELECT * FROM `posts` ORDER BY `created_at` DESC LIMIT 3"); ?>
+            <?php $sql = "SELECT * FROM `posts` ORDER BY `created_at` DESC LIMIT 3"; ?>
+            <?php sql($sql); ?>
+            <?php $statement = $pdo->query($sql); ?>
             <?php while($row = $statement->fetch(PDO::FETCH_OBJ)): ?>
             <div class="col-md-4 portfolio-item">
                 <a href="#">
