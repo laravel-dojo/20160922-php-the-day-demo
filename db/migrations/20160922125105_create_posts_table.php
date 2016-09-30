@@ -27,6 +27,12 @@ class CreatePostsTable extends AbstractMigration
      */
     public function change()
     {
-        
+        $table = $this->table('posts');
+
+        $table->addColumn('title', 'string')
+            ->addColumn('content', 'text')
+            ->addColumn('created_at', 'timestamp')
+            ->addColumn('updated_at', 'timestamp')
+            ->create();
     }
 }
