@@ -14,6 +14,8 @@ class PostSeeder extends AbstractSeed
      */
     public function run()
     {
+        $this->execute('TRUNCATE TABLE posts');
+
         $data = [];
 
         foreach (range(1, 10) as $index) {
