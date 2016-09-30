@@ -14,6 +14,18 @@ class PostSeeder extends AbstractSeed
      */
     public function run()
     {
-        
+        $data = [];
+
+        foreach (range(1, 10) as $index) {
+            $data[] = [
+                'title' => 'title '.$index,
+                'content' => 'content '.$index,
+            ];
+        }
+
+        $posts = $this->table('posts');
+
+        $posts->insert($data)
+            ->save();
     }
 }
