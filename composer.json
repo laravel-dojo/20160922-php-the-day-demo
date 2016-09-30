@@ -9,5 +9,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "recca0120/laravel-tracy": "^1.7"
+    }
 }
