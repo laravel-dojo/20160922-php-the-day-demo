@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Faker\Factory as Faker;
 use Phinx\Seed\AbstractSeed;
 
@@ -22,8 +23,10 @@ class PostSeeder extends AbstractSeed
 
         foreach (range(1, 10) as $index) {
             $data[] = [
-                'title'   => $faker->realText(10),
-                'content' => $faker->realText(500),
+                'title'      => $faker->realText(10),
+                'content'    => $faker->realText(500),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ];
         }
 
