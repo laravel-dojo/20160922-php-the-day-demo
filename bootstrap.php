@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Asia/Taipei');
+
 require __DIR__.'/vendor/autoload.php';
 
 include __DIR__.'/libs/my_string_mutator.php';
