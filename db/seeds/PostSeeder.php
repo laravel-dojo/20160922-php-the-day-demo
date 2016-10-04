@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Factory as Faker;
 use Phinx\Seed\AbstractSeed;
 
 class PostSeeder extends AbstractSeed
@@ -16,12 +17,13 @@ class PostSeeder extends AbstractSeed
     {
         $this->execute('TRUNCATE TABLE posts');
 
-        $data = [];
+        $faker = Faker::create('zh_TW');
+        $data  = [];
 
         foreach (range(1, 10) as $index) {
             $data[] = [
-                'title' => 'title '.$index,
-                'content' => 'content '.$index,
+                'title'   => $faker->realText(10),
+                'content' => $faker->realText(500),
             ];
         }
 
