@@ -20,13 +20,14 @@ class PostSeeder extends AbstractSeed
 
         $faker = Faker::create('zh_TW');
         $data  = [];
+        $total = 10;
 
-        foreach (range(1, 10) as $index) {
+        foreach (range(1, $total) as $index) {
             $data[] = [
                 'title'      => $faker->realText(10),
                 'content'    => $faker->realText(500),
-                'created_at' => Carbon::now()->addDays($index),
-                'updated_at' => Carbon::now()->addDays($index),
+                'created_at' => Carbon::now()->subDays($total - $index),
+                'updated_at' => Carbon::now()->subDays($total - $index),
             ];
         }
 
